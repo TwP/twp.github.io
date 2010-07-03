@@ -1,0 +1,74 @@
+
+/* RainForest - http://kuler.adobe.com/#themeID/684677 */
+#colors {
+    position: absolute; top: 20px; right: 40px; padding: 5px; z-index: 42;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+}
+#colors div {
+    width: 35px; height: 35px; float: left; margin-right: 5px;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+    -moz-box-shadow: #DDD 0 0 3px; -webkit-box-shadow: #DDD 0 0 3px;
+}
+#colors > div                         { background-color: #003F4C; }
+#colors > div + div                   { background-color: #5B702D; }
+#colors > div + div + div             { background-color: #86BA5B; }
+#colors > div + div + div + div       { background-color: #CFCF6B; }
+#colors > div + div + div + div + div { background-color: #BF542E; margin-right: 0; }
+
+@font-face {
+    font-family: MarcelleScript;
+    src: url('../fonts/MarcelleScript.ttf');
+}
+
+html, body { background: #003F4C; }
+body { width: 60em; margin: 0 auto; padding: 0; font-size: 100%; font-family: verdana; }
+
+h1 { margin: 1em 0 0; font-size: 1.5em; color: #003F4C; font-weight: bold; border-bottom: 1px solid #BF542E; }
+p { margin: 1em 0 0; }
+a {
+    padding: 0 0.5em; text-decoration: none; font-weight: normal; color: #115D6E; background-color: #CFCF6B;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+}
+a:hover { background-color: #BF542E; }
+
+ul { margin: 1em 0 0; }
+ul li:before { content: "\2022 \0020"; color: #BF542E; }
+
+pre {
+    margin: 1em 2em 0; padding: 1em;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+}
+code {
+    padding: 0 0.5em; background-color: #EEE; vertical-align: middle;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+}
+
+#header { margin: 0; padding: 0 2em 0.5em; background: #CFCF6B; border-bottom: 4px solid #5B702D; position: relative; }
+#header .embiggen { color: #003F4C; font-family: MarcelleScript; font-size: 5em; }
+#header .subtext { color: #BF542E; font-size: 1.2em; position: relative; top: 0.9em; left: -7em; }
+#header ul.navbar { margin: 0; padding: 0; position: absolute; right: 3em; bottom: 0; }
+#header ul.navbar li {
+    margin: 0 2px; padding: 0.2em 0.8em 4px; display: inline; background-color: #5B702D; color: #EEE; font-weight: bold;
+    -moz-border-radius-topright: 5px; -moz-border-radius-topleft: 5px;
+    -webkit-border-top-right-radius: 5px; -webkit-border-top-left-radius: 5px;
+}
+#header ul.navbar li.selected { background-color: #F4F5D7; color: black; }
+#header ul.navbar li:before { content: '';  }
+#header ul.navbar li:hover  { background-color: #86BA5B; }
+#header ul.navbar li.selected:hover  { background-color: #F4F5D7; }
+
+#content {
+    margin: 0; padding: 1em 3em 3em; background: #F4F5D7;
+    -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px;
+}
+
+#footer {
+    margin: 2em 0 0; padding: 0.5em 4em 2em; background-color: #5B702D; color: #EEE; font-size: 0.8em;
+    -moz-border-radius-topright: 5px; -moz-border-radius-topleft: 5px;
+    -webkit-border-top-right-radius: 5px; -webkit-border-top-left-radius: 5px;
+}
+
+.parenthetical { font-style: italic; color: #599994; }
