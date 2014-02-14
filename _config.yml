@@ -1,3 +1,4 @@
-name: Your New Jekyll Site
+name: Pea53
 markdown: redcarpet
 pygments: true
+exclude: ["vendor"]
