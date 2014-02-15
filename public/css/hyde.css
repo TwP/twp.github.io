@@ -30,6 +30,7 @@ Learn more at http://andhyde.com or https://github.com/mdo/hyde.
  * Container
  * Posts
  * Error page
+ * Archives
  * Pagination
  * Themes
  */
@@ -357,6 +358,26 @@ a:focus {
 }
 .related-posts li a:hover small {
   color: inherit;
+}
+
+
+/*
+ * Archives
+ *
+ * List of all posts group by year.
+ */
+
+.archives-links {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.archives-links li {
+  color: inherit;
+}
+.archives-date {
+  color: #9a9a9a;
+  font-size: 75%;
 }
 
 
