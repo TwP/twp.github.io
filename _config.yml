@@ -1,4 +1,19 @@
-name: Pea53
-markdown: redcarpet
-pygments: true
-exclude: ["vendor"]
+# Dependencies
+markdown:     redcarpet # rdiscount
+pygments:     true
+
+# Permalinks
+permalink:    /:year/:month/:title
+
+# Setup
+title:        Pea53
+tagline:      "Software and Such"
+description:  "I'm Tim Pease. I ride bikes and write software. I work at <a href=\"https://github.com\">GitHub</a>."
+url:          http://pea53.com
+
+author:
+  name:       "Tim Pease"
+  url:        https://twitter.com/pea53
+
+paginate:     5
+exclude:     ["vendor"]

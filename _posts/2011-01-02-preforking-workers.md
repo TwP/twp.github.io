@@ -117,7 +117,8 @@ rescue Errno::ECONNREFUSED
   retry
 
 ensure
-  # Give the workers time to complete their current task and then stop the pool
+  # Give the workers time to complete their current task
+  # and then stop the pool
   sleep 5
 
   pool.stop

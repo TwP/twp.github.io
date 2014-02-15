@@ -53,7 +53,9 @@ class Rails::Initializer
     config = configuration
     eval(IO.read(_fn), binding, _fn)
 
-    silence_warnings { Object.const_set "RAILS_DEFAULT_LOGGER", Logging::Logger[Rails] }
+    silence_warnings {
+      Object.const_set("RAILS_DEFAULT_LOGGER", Logging::Logger[Rails])
+    }
   end
 
   alias :load_environment_without_logging :load_environment
@@ -64,7 +66,10 @@ class Rails::Initializer
   # logger is already set, it is not changed.
   #
   def initialize_framework_logging
-    for framework in ([ :active_record, :action_controller, :action_mailer ] & configuration.frameworks)
+    frameworks = configuration.frameworks &
+                 [:active_record, :action_controller, :action_mailer]
+
+    frameworks.each do |framework|
       base = framework.to_s.camelize.constantize.const_get("Base")
       base.logger ||= Logging::Logger[base]
     end
@@ -89,9 +94,10 @@ require File.join(File.dirname(__FILE__), 'boot')
 require 'logging-rails'
 
 Rails::Initializer.run do |config|
-  # Settings in config/environments/* take precedence over those specified here.
-  # Application configuration should go into files in config/initializers
-  # -- all .rb files in that directory are automatically loaded.
+  # Settings in config/environments/* take precedence over those
+  # specified here. Application configuration should go into files
+  # in config/initializers -- all .rb files in that directory are
+  # automatically loaded.
 
   ...
 end
@@ -217,7 +223,7 @@ extract information from the aggregated log files. That is another entire post
 in itself. Please respond on [Twitter](http://twitter.com/pea53) if you are
 interested in learning more.
 
-#### Postscript
+## Postscript
 
 This approach to rolling Rails log files only works with Rails 2 projects.
 Rails 3 has drastically changed the initialization process. A post is
