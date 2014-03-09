@@ -6,7 +6,7 @@ title:  "Versioning ElasticSearch Indices"
 Here is the approach we use at GitHub to update the search indices on our
 developer's machines and in our test environment. We want this process to be
 automatic and painless. Developers should not need to take special actions
-when search indices are updated - it needs to just work.
+when search indices are updated - it needs to just work on their machine.
 
 ### Generating Versions
 
@@ -35,7 +35,7 @@ ordered, this version method will return the same SHA1 for the same inputs.
 
 Here is the clever bit. We can add **any** field to the index settings, and
 ElasticSearch will store the field. Let's store our version SHA1 in the index
-settings when it is created.
+settings when the index is created.
 
 ```bash
 curl -XPUT 'http://localhost:9200/demo/' -d '{
@@ -70,9 +70,25 @@ curl -XGET 'http://localhost:9200/demo/_settings'
 ```
 
 When these two version SHA1s disagree, our bootstrap script knows to recreate
-and repopulate the index. And only those indices that have been modified are
-recreated. And all of this happens without any extra action from our
-developers.
+and repopulate the index. Because of the version SHA1s, only those indices
+that have been modified are recreated. And all of this happens without any
+extra work required from our developers.
 
-Here's to reducting friction! Thanks for reading.
+Here's to reducting friction!
 
+### Why Use a SHA1?
+
+Wouldn't a version number be simpler? Well yes ... and no. We could put an
+explicit version number in the settings for each index. The settings, like our
+mappings, are also literal Ruby Hashes that live in source code files. You
+could look at the source code and easily see that "this is version 42 of the
+index."
+
+The problem is remembering to change that version number each time you make a
+change to the index. Forcing a human to remember anything is error prone - it
+increases friction.
+
+With the SHA1 the whole versioning process is automated. There is nothing to
+forget, and we can focus on improving search - not managing search.
+
+Thanks for reading.
