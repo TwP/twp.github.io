@@ -150,7 +150,7 @@ abbr[title] {
 /* Code */
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: Inconsolata, Menlo, Monaco, "Courier New", monospace;
 }
 code {
   padding: .25em .5em;
@@ -164,7 +164,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 1rem;
-  font-size: .8rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   white-space: pre;
   white-space: pre-wrap;
@@ -183,7 +183,6 @@ pre code {
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
-  font-size: 14px;
 }
 .highlight pre {
   margin-bottom: 0;
