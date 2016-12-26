@@ -1,31 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en-us">
 
   {% include head.html %}
 
   <body class="theme-base-0d">
 
-    <header class="masthead">
-      <div class="masthead-inner">
-        <h1>{{ site.title }}</h1>
-        <p class="lead">{{ site.description }}</p>
-
-        <div class="colophon">
-          <ul class="colophon-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/archives">Archives</a></li>
-            <br>
-            <li>
-              GitHub: <a href="https://github.com/TwP">TwP</a>
-            </li>
-            <li>
-              Twitter: <a href="https://twitter.com/pea53">pea53</a>
-            </li>
-          </ul>
-          <p>&copy; 2014 {{ site.author.name }}<br>All rights reserved</p>
-        </div>
-      </div>
-    </header>
+    {% include sidebar.html %}
 
     <div class="content container">
       {{ content }}
