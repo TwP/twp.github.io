@@ -3,19 +3,34 @@
     <div class="sidebar-about">
       <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
       <p class="lead">
-      {{ with .Site.Params.description }} {{.}} {{ else }}An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.{{end}}
+        I'm Tim Pease. I ride bikes and write software. I build spaceships at <a href="https://eoi.space">EOI Space</a>.
       </p>
     </div>
 
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
-        {{ range .Site.Menus.main -}}
-          <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-        {{- end }}
+        <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li><a href="{{ .Site.BaseURL }}/posts/">Posts</a></li>
+        <br/>
+        <li>
+          <a href="https://github.com/TwP">
+            {{ with resources.Get "socials/github.svg" -}}
+            {{ .Content | safe.HTML }}
+            {{- end }}
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/timpease/">
+            {{ with resources.Get "socials/linkedin.svg" -}}
+            {{ .Content | safe.HTML }}
+            {{- end }}
+            <span>LinkedIn</span>
+          </a>
+        </li>
       </ul>
     </nav>
 
-    <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}. All rights reserved. {{end}}</p>
+    <p>&copy; {{ now.Format "2006"}} Tim Pease<br/>All rights reserved</p>
   </div>
 </aside>

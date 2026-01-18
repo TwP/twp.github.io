@@ -88,15 +88,24 @@ html {
   padding-left: 0;
   list-style: none;
 }
-.sidebar-nav-item {
+.sidebar-nav li {
   display: block;
 }
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
+a.sidebar-nav li:hover,
+a.sidebar-nav li:focus {
   text-decoration: underline;
 }
-.sidebar-nav-item.active {
+.sidebar-nav li.active {
   font-weight: bold;
+}
+.sidebar-nav svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px 4px 0 0;
+  color: rgba(255,255,255,.5);
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
 }
 
 /* Sticky sidebar
