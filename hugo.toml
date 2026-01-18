@@ -1,3 +1,15 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://pea53.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Pea53'
+theme = 'hyde'
+
+[params]
+  themeColor = "theme-base-0d"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    noClasses = true
+    guessSyntax = false
+    tabWidth = 2
+    style = 'catppuccin-latte'
