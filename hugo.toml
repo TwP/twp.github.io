@@ -1,10 +1,10 @@
 baseURL = 'https://pea53.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Pea53'
 theme = 'compad'
 
 [params]
-  description = "I'm Tim Pease. I ride bikes and write software. I build spaceships at EOI Space."
+  description = "I'm Tim Pease – I ride bikes and write software"
   github = "https://github.com/TwP"
   linkedin = "https://www.linkedin.com/in/timpease/"
 
