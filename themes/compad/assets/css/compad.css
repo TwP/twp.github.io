@@ -233,7 +233,7 @@ a:focus,
   padding: 32px 42px;
   color: var(--text);
   background-color: var(--paper);
-  background-image: url("/images/engineering-grid-200.svg");
+  background-image: url("/images/engineering-grid.svg");
   background-repeat: repeat;
   border-right-width: 1px;
   border-bottom: 0;
