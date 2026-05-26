@@ -1,10 +1,12 @@
 baseURL = 'https://pea53.com/'
 languageCode = 'en-us'
 title = 'Pea53'
-theme = 'hyde'
+theme = 'compad'
 
 [params]
-  themeColor = "theme-base-0d"
+  description = "I'm Tim Pease. I ride bikes and write software. I build spaceships at EOI Space."
+  github = "https://github.com/TwP"
+  linkedin = "https://www.linkedin.com/in/timpease/"
 
 [markup]
   [markup.highlight]
@@ -12,4 +14,4 @@ theme = 'hyde'
     noClasses = true
     guessSyntax = false
     tabWidth = 2
-    style = 'catppuccin-latte'
+    style = 'paraiso-light'

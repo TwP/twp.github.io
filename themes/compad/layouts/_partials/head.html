@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ hugo.Generator }}
+
+  {{ if .IsHome -}}
+  <title>{{ .Site.Title }}</title>
+  {{- else -}}
+  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+  {{- end }}
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700">
+
+  {{ partial "head_css.html" . }}
+
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
+  {{ end -}}
+</head>

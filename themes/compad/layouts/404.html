@@ -1,0 +1,9 @@
+{{ define "header-middle" -}}
+<div class="header-title">404</div>
+<div class="header-meta">Page not found</div>
+{{- end }}
+
+{{ define "main" -}}
+<h1>404: Page not found</h1>
+<p>Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="{{ .Site.BaseURL | relURL }}">Head back home</a> to try finding it again.</p>
+{{- end }}

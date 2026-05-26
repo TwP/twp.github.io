@@ -1,0 +1,44 @@
+{{ partial "head.html" . -}}
+<body>
+<div class="stripes" aria-hidden="true">
+  <div class="stripe stripe-indigo"></div>
+  <div class="stripe stripe-sage"></div>
+  <div class="stripe stripe-orange"></div>
+  <div class="stripe stripe-ochre"></div>
+</div>
+<main class="sheet" aria-label="{{ .Site.Title }}">
+  <div class="margin-cell left-top" aria-hidden="true"></div>
+
+  <section class="header-cell header-left" aria-labelledby="site-title">
+    <div class="header-title" id="site-title"><a href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a></div>
+    <div class="header-meta">{{ with .Site.Params.description }}{{ . }}{{ else }}Engineering Notebook{{ end }}</div>
+  </section>
+
+  <section class="header-cell header-middle" aria-label="Page title">
+    {{ block "header-middle" . -}}
+      <div class="header-title">{{ .Title }}</div>
+    {{- end }}
+    <nav class="header-nav header-meta" aria-label="Primary">
+      <a href="{{ .Site.BaseURL | relURL }}">Home</a>
+      <span aria-hidden="true">&middot;</span>
+      <a href="{{ "posts/" | relURL }}">Posts</a>
+    </nav>
+  </section>
+
+  <section class="header-cell header-right" aria-label="Social links">
+    {{ partial "socials.html" . }}
+  </section>
+
+  <div class="margin-cell right-top" aria-hidden="true"></div>
+
+  <div class="margin-cell left-margin" aria-hidden="true"></div>
+  <article class="content">
+    {{ block "main" . -}}{{- end }}
+  </article>
+  <div class="margin-cell right-margin" aria-hidden="true"></div>
+</main>
+<footer class="page-footer">
+  &copy; {{ now.Format "2006" }} Tim Pease &middot; All rights reserved
+</footer>
+</body>
+</html>

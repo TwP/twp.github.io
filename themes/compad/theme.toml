@@ -1,0 +1,10 @@
+name = "Compad"
+license = "MIT"
+description = "Engineering notebook themed Hugo blog theme."
+tags = ["blog", "engineering", "notebook"]
+features = ["blog"]
+min_version = 0.110
+
+[author]
+    name = "Tim Pease"
+    homepage = "https://pea53.com"

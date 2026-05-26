@@ -1,0 +1,18 @@
+{{ define "header-middle" -}}
+<div class="header-title">{{ .Title }}</div>
+{{- end }}
+
+{{ define "main" -}}
+<h1>{{ .Title }}</h1>
+{{ range .Data.Pages.GroupByDate "2006" -}}
+<h2 class="year-heading">{{ .Key }}</h2>
+<ul class="post-list">
+{{ range .Pages -}}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  </li>
+{{- end }}
+</ul>
+{{- end }}
+{{- end }}

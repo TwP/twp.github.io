@@ -1,0 +1,20 @@
+{{- $github := .Site.Params.github | default "https://github.com/TwP" -}}
+{{- $linkedin := .Site.Params.linkedin | default "https://www.linkedin.com/in/timpease/" -}}
+<ul class="socials">
+  <li>
+    <a href="{{ $github }}" aria-label="GitHub">
+      {{ with resources.Get "socials/github.svg" -}}
+      {{ .Content | safeHTML }}
+      {{- end }}
+      <span>GitHub</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ $linkedin }}" aria-label="LinkedIn">
+      {{ with resources.Get "socials/linkedin.svg" -}}
+      {{ .Content | safeHTML }}
+      {{- end }}
+      <span>LinkedIn</span>
+    </a>
+  </li>
+</ul>
