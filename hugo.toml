@@ -14,4 +14,4 @@ theme = 'compad'
     noClasses = true
     guessSyntax = false
     tabWidth = 2
-    style = 'paraiso-light'
+    style = 'nord'
